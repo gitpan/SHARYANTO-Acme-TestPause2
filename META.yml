@@ -15,4 +15,4 @@ meta-spec:
 name: SHARYANTO-Acme-TestPause2
 requires:
   perl: 5.010001
-version: 0.03
+version: 0.04

@@ -4,17 +4,15 @@ use 5.010;
 use strict;
 use warnings;
 
-our $VERSION = '0.03'; # VERSION
+our $VERSION = '0.04'; # VERSION
 
 sub s1 {
     say "s1 from SHARYANTO-Acme-TestPause2";
 }
 
-{
-    no warnings;
-    sub LYUMING::Acme::TestPause1::s1 {
-        say "s1 from SHARYANTO-Acme-TestPause2, clobbering LYUMING::Acme::TestPause1";
-    }
+package LYUMING::Acme::TestPause1;
+sub s1 {
+    say "s1 from SHARYANTO-Acme-TestPause2, clobbering LYUMING::Acme::TestPause1";
 }
 
 1;
@@ -30,7 +28,7 @@ SHARYANTO::Acme::TestPause2 - Abstract
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =for Pod::Coverage .*
 
